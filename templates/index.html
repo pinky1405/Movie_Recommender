@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.bg-image {
+background-image:url("homepage.jpg");
+background-color: #cccccc;
+height: 750px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+ 
+.bg-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+}
+ 
+</style>
+</head>
+<body>
+
+<!-- Demo -->
+    <div class="bg-image">
+    <div class="bg-text">
+    <div class="movie">
+        <h2><u>Movie Recommendation System</u></h2>
+        <form action="{{ url_for('main') }}" method="POST">
+            <input type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" required />
+            <input type="submit" id="submission_button" value="Submit"/>
+        </form>
+        <p style="color: #919191; padding: 1em;">The model uses <b>Content Based Recommendations</b> to find similar movies. Intuitive idea behind is <i>"If a person likes a particular item, he/she will also like an item that is similar to it."</i> The dataset is taken from <a href="https://www.kaggle.com/" target="_blank">Kaggle.com</a>.</p>
+        <br>
+</div>
+</div>
+</div>       
+</body>
+</html>
+
